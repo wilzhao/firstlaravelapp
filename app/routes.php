@@ -13,5 +13,14 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return 'hello!';
+	//return View::make('hello');
+});
+
+Route::get('/add-book',function(){
+	$data = 'Add a new book';
+	$data .= '<form method = "POST" action = "/add-book">';
+	$data .= '<input type = "text" name = "title"><input type = "submit">';
+	$data .= '</form>';
+	return $data;
 });

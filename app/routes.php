@@ -17,6 +17,10 @@ Route::get('/', function()
 	//return View::make('hello');
 });
 
+Route::get('/first',function(){
+	return 'first!';
+});
+
 Route::get('/add-book',function(){
 	$data = 'Add a new book';
 	$data .= '<form method = "POST" action = "/add-book">';
